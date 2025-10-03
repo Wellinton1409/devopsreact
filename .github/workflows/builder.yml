@@ -26,4 +26,4 @@ jobs:
     - name: Instalacion del Surge
       run: npm install --global surge
     - name: Desplegar la APP
-      run: surge ./dist humdrum-teeth.surge.sh --token ad6262bc9dac5717082f1cab80410252
+      run: surge ./dist ${{vars.DOMAIN}} --token ${{secrets.MITOKEN}}
